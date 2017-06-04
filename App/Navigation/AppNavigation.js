@@ -1,4 +1,6 @@
 import { StackNavigator } from 'react-navigation'
+import TopCategoryScreen from '../Containers/TopCategoryScreen'
+import DrawerScreen from '../Containers/DrawerScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
 import LoginScreen from '../Containers/LoginScreen'
 
@@ -6,7 +8,9 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
-  LaunchScreen: { screen: LaunchScreen },
+  TopCategoryScreen: { screen: TopCategoryScreen },
+  DrawerScreen: { screen: DrawerScreen },
+  LaunchScreen: { screen: TopCategoryScreen },
   LoginScreen: {
     screen: LoginScreen,
     navigationOptions: { title: 'Login' }
